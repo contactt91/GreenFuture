@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GreenFuture.sbs - Join us in building a sustainable future through renewable energy, eco-friendly living, and community initiatives.">
+    <title>GreenFuture.sbs - A Sustainable Future, Together</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://greenfuture.mos.ap-southeast-2.sufybkt.com/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            color: #2e2e2e;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styling */
+        header {
+            background: #388E3C;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        header .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        header .logo span {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        header .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        header .nav-links li {
+            margin: 0 15px;
+        }
+
+        header .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        header .nav-links a:hover {
+            color: #c8e6c9;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            background: url('https://greenfuture.mos.ap-southeast-2.sufybkt.com/background.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 1rem;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero a {
+            background: #4CAF50;
+            padding: 0.75rem 2rem;
+            color: #ffffff;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .hero a:hover {
+            background: #2e7d32;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+
+        section p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #616161;
+        }
+
+        /* Initiatives Section */
+        .initiatives {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .initiative-card {
+            background: #ffffff;
+            padding: 2rem;
+            flex: 1 1 30%;
+            margin: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .initiative-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .initiative-card img {
+            width: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .initiative-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            color: #388E3C;
+        }
+
+        .initiative-card p {
+            color: #555555;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #2e7d32;
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* New Section Styles */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background-color: #388E3C;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #2e7d32;
+        }
+
+        /* Community Section Button */
+        .community-section {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .join-us-btn {
+            background-color: #388E3C;
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2rem;
+            transition: background 0.3s;
+        }
+
+        .join-us-btn:hover {
+            background-color: #2e7d32;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero a {
+                padding: 0.75rem 1.5rem;
+            }
+
+            .initiatives {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .initiative-card {
+                flex: 1 1 80%;
+                margin: 1rem 0;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                width: 90%;
+            }
+
+            .community-section {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header .logo span {
+                font-size: 1.2rem;
+            }
+
+            header .nav-links {
+                display: none;
+            }
+
+            header .nav-links a {
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero a {
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="#" class="logo">
+        <img src="https://greenfuture.mos.ap-southeast-2.sufybkt.com/header.png" alt="GreenFuture logo">
+        <span>GreenFuture.sbs</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#initiatives">Initiatives</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Building a Sustainable Future Together</h1>
+        <p style="color: white;">Join us in our journey to create a greener, more sustainable world for all.</p>
+        <a href="#initiatives">Explore Our Initiatives</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>At GreenFuture.sbs, we believe in a future powered by renewable energy, eco-friendly practices, and community involvement. We aim to create a positive impact on the environment and future generations.</p>
+</section>
+
+<section id="initiatives">
+    <h2>Our Initiatives</h2>
+    <p>Our initiatives are focused on renewable energy, sustainable living, and community engagement. We aim to inspire and empower individuals and organizations to adopt eco-friendly practices.</p>
+
+    <div class="initiatives">
+        <div class="initiative-card">
+            <img src="https://greenfuture.mos.ap-southeast-2.sufybkt.com/logo.png" alt="Renewable Energy">
+            <h3>Renewable Energy</h3>
+            <p>Harnessing the power of the sun, wind, and other renewable sources to power our world sustainably.</p>
+        </div>
+        <div class="initiative-card">
+            <img src="https://greenfuture.mos.ap-southeast-2.sufybkt.com/logo2.png" alt="Sustainable Living">
+            <h3>Sustainable Living</h3>
+            <p>Promoting practices that reduce waste, conserve resources, and protect the environment.</p>
+        </div>
+        <div class="initiative-card">
+            <img src="https://greenfuture.mos.ap-southeast-2.sufybkt.com/logo3.png" alt="Community Engagement">
+            <h3>Community Engagement</h3>
+            <p>Building strong, sustainable communities that work together for a better future.</p>
+        </div>
+    </div>
+</section>
+
+<section id="community" class="community-section">
+    <h2>Join the GreenFuture Community</h2>
+    <a href="https://t.me/greenfuturesbs" class="join-us-btn">Join Us Now</a>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 GreenFuture.sbs | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/term-of-services.html">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>
